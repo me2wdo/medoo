@@ -1,0 +1,42 @@
+{
+    "name": "بوت تصفيه",
+    "description": "BaNall bot powerfull onw @EU_ET",
+    "logo": "https://telegra.ph/file/b3e5093cb07c6185cd3fc.jpg",
+    "keywords": ["ᴋɪsᴀɴ-ʀᴀᴠɪ", "ʙᴀɴ-ᴀʟʟ"],
+    "repository": "https://github.com/sir-ahmed/Ban",
+    "stack": "container",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "ضع هنا توكن بوتك 🕹️",
+            "required": true
+        },
+        "OWNER": {
+            "description": "ضع معرف حسابك بدون @ مثال @EU_ET",
+            "required": true,
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "ضع هنا الايبي هاش",
+            "required": true,
+            "value": ""
+        },
+        "API_ID": {
+            "description": "ضع هنا الايبي ايدي",
+            "required": true,
+            "value": ""
+        }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1
+          }
+      }
+ }
