@@ -5,11 +5,17 @@ from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton 
 from pyrogram.errors import ChatAdminRequired 
  
-logging.basicConfig( 
-    level=logging.DEBUG, 
-    format= %(asctime)s - %(name)s - %(levelname)s - %(message)s  
-) 
-logging.getLogger("pyrogram").setLevel(logging.WARNING) 
+logging.basicConfig(
+
+    level=logging.DEBUG,
+
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+)
+
+logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
+
  
 # config vars 
 API_ID = int(os.getenv("API_ID")) 
