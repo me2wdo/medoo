@@ -5,17 +5,11 @@ from pyrogram import Client, filters, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton 
 from pyrogram.errors import ChatAdminRequired 
  
-logging.basicConfig(
-
-    level=logging.DEBUG,
-
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-
-)
-
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-
+logging.basicConfig( 
+    level=logging.DEBUG, 
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s' 
+) 
+logging.getLogger("pyrogram").setLevel(logging.WARNING) 
  
 # config vars 
 API_ID = int(os.getenv("API_ID")) 
@@ -37,7 +31,7 @@ filters.command("start")
 ) 
 async def start_command(client, message: Message): 
   await message.reply_video( 
-                            video = f"https://telegra.ph//file/85cde23118db22b66e727.mp4", 
+                            video = f"https://telegra.ph/file/a3053a30b341b3a8bc85e.mp4", 
                                 caption = f"↢ اهلا انا بوت تصفيه مجموعات , استطيع حظر 1000 شخص خلال دقيقه 🕜\n\nللحصول علي كود حظر الاعضاء تواصل مع المطور 🔎\n\n↞ المطور @EU_ET", 
   reply_markup=InlineKeyboardMarkup( 
             [ 
