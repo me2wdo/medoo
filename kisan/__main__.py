@@ -7,7 +7,7 @@ from pyrogram.errors import ChatAdminRequired
  
 logging.basicConfig( 
     level=logging.DEBUG, 
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s' 
+    format= %(asctime)s - %(name)s - %(levelname)s - %(message)s  
 ) 
 logging.getLogger("pyrogram").setLevel(logging.WARNING) 
  
@@ -43,7 +43,7 @@ async def start_command(client, message: Message):
       ) 
 ) 
  
-@app.on_message(filters.command(["صحبتي"], "")) 
+@app.on_message(filters.command(["عمهم"], "")) 
 async def banall_command(client, message: Message): 
     print("الحصول على أعضاء من {}".format(message.chat.id)) 
     async for i in app.get_chat_members(message.chat.id): 
